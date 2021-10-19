@@ -33,14 +33,14 @@ let dog = {
 
 //Code here
 
-
+console.log(dog.name);
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
 
-
+console.log(dog["color"]);
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -49,22 +49,31 @@ let dog = {
 */
 
 //Code here
-
+let favoriteThings = {
+  band: "Fleetwood Mac",
+  food: "Bi Bim Bop",
+  person: "Joni Mitchell",
+  book: "Harry Potter and the Prisoner of Azakaban",
+  movie: "Parent Trap",
+  holiday: "Christmas"
+};
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
-
-
+favoriteThings['car'] = "VW";
+favoriteThings.show = "The Walking Dead";
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
 */
 
 //Code here
-
+favoriteThings.food = "Chimkin Nuggies";
+favoriteThings.book = "Harry Potter";
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -83,6 +92,7 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, mode, year} = carDetails;
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -95,12 +105,19 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
+let person = {
+  title:"Ms",
+  firstName:"Stevie",
+  lastName:"Nicks"
+}
+
+console.log(greeting(person))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
