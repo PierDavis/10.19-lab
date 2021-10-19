@@ -131,7 +131,20 @@ console.log(greeting(person))
 */
 
 //Code Here
+function totalPopulation(obj) {
+  const { utah, california, texas, arizona } = obj;
+ 
+  return utah + california + texas + arizona;
+}
 
+let states = {
+  utah:10,
+  california:10,
+  texas: 30,
+  arizona: 50
+  
+}
+totalPopulation(states)
 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
@@ -145,6 +158,21 @@ console.log(greeting(person))
 */
 
 //Code Here
+
+function ingredients(obj) {
+  let arr =[]
+
+  let {carb, fat, protein} = obj
+  arr.push(carb);
+  arr.push(fat);
+  arr.push(protein);
+  
+}
+ let foods = {
+   carb: 'yum',
+   fat: 'mmm',
+    protein: 'ehh'
+ }
 
 
 
@@ -175,7 +203,7 @@ var user = {
 */
 
 //Code Here
-
+delete user.age
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -185,6 +213,17 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name,age,color) {
+    this.name = name;
+    this.age = age;
+    this.color = color
+  }
+}
+
+
+let cat = new Cat("Crookshanks",10,"orange")
+console.log(cat.name)
 
 
 
@@ -197,6 +236,20 @@ var user = {
 */
 
 //Code here
+class Wizard {
+  constructor(name,age,favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell
+  }
+
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
+
+let wizard = new Wizard("Tonks", 26, "Lumos")
+wizard.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -222,7 +275,27 @@ var user = {
 */
 
 //Code Here
+class Phone {
+  constructor(brand,model,storage,color,price) {
+   this.brand = brand;
+   this.model = model;
+   this.storage = storage;
+   this.color = color;
+   this.price = price;
+   this.sold = false
+ }
 
+
+
+ sell() {
+   this.sold = true
+   console.log(`${this.brand}${this.model} has been sold`)
+ }
+
+ changePrice(updatedPrice) {
+     this.price = updatedPrice
+ }
+}
   
 /*
     Next make three new phone instances using your class.
@@ -235,6 +308,11 @@ var user = {
 */
 
 //Code Here
+let phone1 = new Phone('Apple', "iPhone 12", '64GB', 'Mint Green', 800)
+
+let phone2 = new Phone("Apple","iphone 13","64gb","red",1000)
+
+let phone3 = new Phone("Google", "Pixel 2", "120 GB", "white", 600)
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -244,7 +322,8 @@ var user = {
 */ 
 
 //Code Here 
-
+phone1.changePrice(500)
+console.log(phone1)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -253,7 +332,8 @@ var user = {
 */
 
 //Code Here 
-
+phone2.sell()
+console.log(phone2)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -272,8 +352,8 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-
-
+let colorsCopy = {...colors}
+console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
